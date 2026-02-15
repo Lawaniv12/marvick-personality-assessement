@@ -1,0 +1,9 @@
+<h2>Enter Your Email</h2>
+<p>We will send your personalized insights and career guidance.</p>
+
+<input [(ngModel)]="email" placeholder="Email address" />
+
+<button [disabled]="!email" routerLink="/test">
+  Continue
+</button>
+

@@ -1,0 +1,83 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+
+/* Option Button Styles */
+.option-button {
+  background: white;
+  border: 3px solid #e5e7eb;
+  color: #374151;
+  cursor: pointer;
+}
+
+.option-button:hover {
+  border-color: #a855f7;
+  background: #faf5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+}
+
+.option-button.selected {
+  border-color: #9333ea;
+  background: linear-gradient(to right, #faf5ff, #eff6ff);
+  box-shadow: 0 4px 16px rgba(147, 51, 234, 0.25);
+}
+
+.option-button:active {
+  transform: scale(0.98);
+}
+
+/* Progress Bar Animation */
+.progress-bar-fill {
+  transition: width 0.5s ease-out;
+}
+
+/* Bounce animation for loading */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Spin animation for loading spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Focus states for accessibility */
+.option-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.2);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.3);
+}
