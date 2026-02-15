@@ -1,14 +1,10 @@
 {
-  "version": 2,
-  "buildCommand": "ng build --configuration production",
-  "outputDirectory": "dist/marvick-personality-assessment",
-  "installCommand": "npm install",
-  "framework": null,
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "@vercel/node@3"
+    }
+  },
   "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/api/:path*"
-    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
